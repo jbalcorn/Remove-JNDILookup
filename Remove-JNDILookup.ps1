@@ -28,9 +28,10 @@
         Get-ChildItem *.jar | .\Remove-JNDILookup.ps1
 
     .NOTES
-        
+        This won't dine into a ZIP file or a WAR file to find the enclosed JAR files
 
-    .FUNCTIONALITY
+    .LINK
+        https://github.com/jbalcorn/Remove-JNDILookup
         
 #>
 [cmdletBinding()]
@@ -79,8 +80,7 @@ Begin {
             .EXAMPLE
             PS> $msg = $logfile | Get-LogObj -function "MyFunction"  # return object has "MyFunction: (Get-Date)" in edfault message
             
-            .LINK
-            https://tfs.jonesday.net/tfs/Security/InfoSec%20Team/_git/ServiceAccountReport
+        
     
         #>
         Param(
@@ -138,9 +138,7 @@ Begin {
             $msg | Write-LogLine -message "A informational message"   
             $msg | Write-LogLine -console -message "A more urgent message"   # Write to logfile and console
     
-            .LINK
-            https://github.com/jbalcorn/Remove-JNDILookup
-    
+ 
         #>
     
         Param(
